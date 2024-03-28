@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+#addMemberButton {
+    position: fixed;
+    top: 140px; 
+    left: 30px; 
+    padding: 10px 20px;
+    background-color: #3b98fb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#showForm:hover {
+    background-color: #0056b3;
+}
+
+#divMemberForm {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+
+#members {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.member {
+    border: 6px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.viewDetailsButton, .deleteMemberButton, .updateMemberButton{
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.viewDetailsButton:hover ,.deleteMemberButton:hover, .updateMemberButton:hover{
+    background-color: #f0f0f0;
+}
+
+.viewDetailsButton p:first-child {
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+.viewDetailsButton, .deleteMemberButton, .updateMemberButton p {
+    margin: 5px 0;
+}
+
+#update, #divMemberForm, #overlay, #add {
+    display: none;
+}
+

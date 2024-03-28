@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Corona Database Management</title>
+     <link href="client.css" rel="stylesheet">
+     <script src="client.js" defer></script>
+</head>
+<body>
+     <h1>Welcome to the system for managing the Korona database</h1>
+     <h2>All members:</h2>
+     <div id="members"></div>
+     <button id="addMemberButton">Add Member</button>
+     <div id="overlay"></div>
+     <div id="divMemberForm">
+         <form id="memberForm">
+             <label for="id">ID:</label>
+             <input type="text" id="id" name="id" pattern="[0-9]{9}" title="ID must be a 9-digit number" required><br>
+             <label for="first_name">First Name:</label>
+             <input type="text" id="first_name" name="first_name" required><br> 
+             <!-- ////pattern="[A-Za-z]" -->
+             <label for="last_name">Last Name:</label>
+             <input type="text" id="last_name" name="last_name" required><br>
+             <!-- pattern="[A-Za-z]" -->
+             <label for="address">Address:</label>
+             <input type="text" id="address" name="address" pattern="^[A-Za-z\s]+,\s*[A-Za-z\s]+,\s*\d+\s*$" required><br>
+             <label for="date_of_birth">Date of birth:</label>
+             <input type="date" id="date_of_birth" name="date_of_birth" required><br>
+             <label for="telephone">Telephone:</label>
+             <input type="text" id="telephone" name="telephone" pattern="0[0-9]{8}" title="Please enter a valid phone number" required><br>
+             <label for="mobile_phone">Mobile Phone:</label>
+             <input type="text" id="mobile_phone" name="mobile_phone" pattern="05[0-9]{8}" title="Please enter a valid phone number" required><br>
+             <label for="vaccine_1_date">Vaccine Date 1:</label>
+             <input type="date" id="vaccine_1_date" name="vaccine_1_date"><br>
+             <label for="vaccine_1_manufacturer">Vaccine Manufacturer 1:</label>
+                <select name="vaccine_1_manufacturer" id="vaccine_1_manufacturer">
+                    <option value="no-choice">No-choice</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Pfizer">Pfizer</option>
+                </select>
+            <label for="vaccine_2_date">Vaccine Date 2:</label>
+            <input type="date" id="vaccine_2_date" name="vaccine_2_date"><br>
+            <label for="vaccine_2_manufacturer">Vaccine Manufacturer 2:</label>
+                <select name="vaccine_2_manufacturer" id="vaccine_2_manufacturer">
+                    <option value="no-choice">No-choice</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Pfizer">Pfizer</option>
+                </select>
+            <label for="vaccine_3_date">Vaccine Date 3:</label>
+            <input type="date" id="vaccine_3_date" name="vaccine_3_date"><br>
+            <label for="vaccine_3_manufacturer">Vaccine Manufacturer 3:</label>
+                <select name="vaccine_3_manufacturer" id="vaccine_3_manufacturer">
+                    <option value="no-choice">No-choice</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Pfizer">Pfizer</option>
+                </select>
+            <label for="vaccine_4_date">Vaccine Date 4:</label>
+            <input type="date" id="vaccine_4_date" name="vaccine_4_date"><br>
+            <label for="vaccine_4_manufacturer">Vaccine Manufacturer 4:</label>
+                    <select name="vaccine_4_manufacturer" id="vaccine_4_manufacturer">
+                        <option value="no-choice">No-choice</option>
+                        <option value="Moderna">Moderna</option>
+                        <option value="Pfizer">Pfizer</option>
+                    </select>
+            <label for="positive_result_date">Positive Result Date:</label>
+            <input type="date" id="positive_result_date" name="positive_result_date"><br>
+            <label for="recovery_date">Recovery Date:</label>
+            <input type="date" id="recovery_date" name="recovery_date"><br>
+            
+            <input id="send" type="submit" value="Add" onclick="return validateDates()">
+         </form>
+     </div>
+</body>
+</html>
